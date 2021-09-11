@@ -94,7 +94,7 @@ namespace netcoreWebapi.Controllers
         [HttpGet("Add")]
         public JsonResult Get(string sql)
         {
-            const string connection = @"Data Source=MyData;Initial Catalog=Product;Trusted_Connection=true";
+            const string connection = @"Server=localhost;Database=mainDB;User Id=sqluser;Password=Y;9r.5JQ6cwy@)V_";
             var conn = new SqlConnection(connection);
             string query = "INSERT INTO customers " + sql;
             var command = new SqlCommand(query, conn);
